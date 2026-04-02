@@ -34,17 +34,28 @@ padding: 0 15px;
 margin: 0 auto;
   }
   /* INTRO */
-  .intro{
+  .intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: url("../Foto/белый\ фон.png") center no-repeat;
-    -webkit-background-size: cover;
+    background: url("../Foto/фон\ 2-главы.jpg") center no-repeat;
     background-size: cover;
+    background-position: center;
+    min-height: 600px; /* Минимальная высота, чтобы не становилось слишком маленьким */
+}
+@media (max-width: 768px) { /* Планшеты */
+  .intro {
+      background-size: cover; /* Позволит фону адаптироваться */
   }
+}
 
+@media (max-width: 480px) { /* Телефоны */
+  .intro {
+      background-size: 150% auto; /* Увеличит размер фонового изображения */
+  }
+}
   .intro__inner{
     width: 100%;
     max-width: 880px;
@@ -455,6 +466,7 @@ margin: 10px auto;
 }
 .reviews{
   padding: 0;
+
 }
 .navigation{
   display:flex;
